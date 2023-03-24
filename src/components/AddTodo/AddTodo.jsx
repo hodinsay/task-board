@@ -13,7 +13,9 @@ const AddTodo = (props) => {
         event.preventDefault();
         if(enteredTodoName.trim().length === 0) return;
         if(!enteredImportantValue || !enteredUrgentValue || !enteredDifficultyValue) return;
-        console.log(enteredTodoName, enteredImportantValue, enteredUrgentValue, enteredDifficultyValue);
+        // console.log(enteredTodoName, enteredImportantValue, enteredUrgentValue, enteredDifficultyValue);
+
+        props.onAddTodo(enteredTodoName, enteredImportantValue, enteredUrgentValue, enteredDifficultyValue);
         setEnteredTodoName('');
         setEnteredImportantValue('');
         setEnteredUrgentValue('');
