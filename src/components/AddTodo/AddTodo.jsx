@@ -13,9 +13,9 @@ const AddTodo = (props) => {
         event.preventDefault();
         if(enteredTodoName.trim().length === 0) return;
         if(!enteredImportantValue || !enteredUrgentValue || !enteredDifficultyValue) return;
-        // console.log(enteredTodoName, enteredImportantValue, enteredUrgentValue, enteredDifficultyValue);
 
         props.onAddTodo(enteredTodoName, enteredImportantValue, enteredUrgentValue, enteredDifficultyValue);
+
         setEnteredTodoName('');
         setEnteredImportantValue('');
         setEnteredUrgentValue('');
@@ -41,7 +41,7 @@ const AddTodo = (props) => {
     return (
         <Card className='form-input'>
             <form onSubmit={addTodoHandler}>
-                <label htmlFor="todo-name">Todo-Name: </label>
+                <label htmlFor="todo-name">Task: </label>
                 <input 
                 type="text" 
                 id='todo-name'
@@ -52,7 +52,6 @@ const AddTodo = (props) => {
                 <select 
                 id='importance' 
                 onChange={importantValueChangeHandler}
-                // defaultValue={'none'}
                 value={enteredImportantValue}
                 >   
                     <option value="none"></option>
@@ -84,7 +83,7 @@ const AddTodo = (props) => {
                 <Button 
                 type="submit" 
                 className='add-button'>
-                    Add Todo
+                    Add Todo +
                 </Button> 
             </form>
         </Card>

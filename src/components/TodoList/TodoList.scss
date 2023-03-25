@@ -1,21 +1,36 @@
 .todos{
     margin: 2rem auto;
+    padding: 1rem;
     width: 90%;
     max-width: 40rem;
 }
 
-.todos ul{
-    list-style: none;
-    padding: 1rem;
-}
-
-.todos h2{
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-}
-
-.todos li{
+.todos div{
     border: 1px solid #ccc;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
+    margin-bottom: 1rem;
+    // display: flex;
+    // align-items: center;
+}
+
+.todos span{
+    font-size: 0.8rem;
+    color: orange;
+}
+
+.todos input{
+    // margin-top: 20px;
+    // width: 5%;
+    cursor: pointer;
+}
+
+.delete-btn{
+    background: rgb(139, 26, 26);
+    border: 1px solid rgb(231, 78, 78);
+    transition: background 0.5s, border-radius 0.5s;
+
+    &:hover,
+    &:active{
+        background: rgb(231, 78, 78);
+        border-radius: 5px;
+    }
 }
