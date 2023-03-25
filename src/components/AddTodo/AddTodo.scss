@@ -36,6 +36,14 @@ select{
     }
 }
 
-.add-button{
-    display: block;
+.form-input .add-button{
+    background: #33b249;
+    border: 1px solid #3fda59;
+    transition: background 0.5s, border-radius 0.5s;
+
+    &:hover,
+    &:active{
+        background: #3fda59;
+        border-radius: 5px;
+    }
 }

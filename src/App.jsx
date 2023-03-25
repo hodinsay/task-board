@@ -10,7 +10,8 @@ const App = () => {
     setTodosList((prevTodosList) => {
       return [...prevTodosList, {name: todoName, importance: todoImportance, urgency: todoUrgency, difficulty: todoDifficulty, id: Math.random().toString()}];
     });
-  }
+  };
+
   
   return (
     <main className="App">
