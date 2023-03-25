@@ -11,9 +11,8 @@ const TodoList = (props) => {
           return(
             <div key={todo.id}>
               <input type='checkbox' id='task' name='task'/> 
-              {todo.name} (<span>{todo.importance} - {todo.urgency} - {todo.difficulty}</span>)
-
-              {/* <Button className='delete-btn'>Remove</Button> */}
+              <label htmlFor="task">{todo.name} (<span>{todo.importance} - {todo.urgency} - {todo.difficulty}</span>)</label> 
+              <Button className='delete-btn'>Remove</Button>
             </div>
             // <label key={todo.id} htmlFor='task'>
             //     <input type='checkbox' id='task' name='task'/>

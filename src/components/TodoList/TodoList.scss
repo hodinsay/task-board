@@ -8,19 +8,15 @@
 .todos div{
     border: 1px solid #ccc;
     margin-bottom: 1rem;
-    // display: flex;
-    // align-items: center;
-}
-
-.todos span{
-    font-size: 0.8rem;
-    color: orange;
 }
 
 .todos input{
-    // margin-top: 20px;
-    // width: 5%;
     cursor: pointer;
+
+    &:checked + label{
+        color: #ccc;
+        text-decoration: line-through;
+    }
 }
 
 .delete-btn{
