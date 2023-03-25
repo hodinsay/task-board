@@ -5,11 +5,11 @@
     max-width: 40rem;
 }
 
-label{
+.form-input label{
     font-weight: bold;
 }
 
-input{
+.form-input input{
     display: block;
     width: 100%;
     border: 1px solid #ccc;
@@ -23,7 +23,7 @@ input{
     }
 }
 
-select{
+.form-input select{
     margin-bottom: 1rem;
     margin-right: 1.1rem;
     padding: 0.15rem;
