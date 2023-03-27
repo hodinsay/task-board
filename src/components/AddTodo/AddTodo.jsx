@@ -83,7 +83,7 @@ const AddTodo = (props) => {
                 <Button 
                 type="submit" 
                 className='add-button'>
-                    Add Todo +
+                    Add Task
                 </Button> 
             </form>
         </Card>
