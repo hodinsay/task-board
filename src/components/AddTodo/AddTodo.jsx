@@ -1,92 +1,47 @@
-import { useState } from 'react';
+import {useState} from 'react';
+import AddTodoForm from "./AddTodoForm";
+import TodoList from '../TodoList/TodoList';
 import './AddTodo.scss';
-import Card from '../UI/Card';
-import Button from '../UI/Button';
+import Card from "../UI/Card";
+import Button from "../UI/Button";
 
 const AddTodo = (props) => {
-    const [enteredTodoName, setEnteredTodoName] = useState('');
-    const [enteredImportantValue, setEnteredImportantValue] = useState();
-    const [enteredUrgentValue, setEnteredUrgentValue] = useState();
-    const [enteredDifficultyValue, setEnteredDifficultyValue] = useState();
+    const [todosList, setTodosList] = useState([]);
+    const [isEditing, setIsEditing] = useState(false);
 
-    const addTodoHandler = (event) => {
-        event.preventDefault();
-        if(enteredTodoName.trim().length === 0) return;
-        if(!enteredImportantValue || !enteredUrgentValue || !enteredDifficultyValue) return;
-
-        props.onAddTodo(enteredTodoName, enteredImportantValue, enteredUrgentValue, enteredDifficultyValue);
-
-        setEnteredTodoName('');
-        setEnteredImportantValue('');
-        setEnteredUrgentValue('');
-        setEnteredDifficultyValue('');
-    };
-
-    const todoNameChangeHandler = (event) => {
-        setEnteredTodoName(event.target.value);
-    };
-
-    const importantValueChangeHandler = (event) => {
-        setEnteredImportantValue(event.target.value);
-    };
-
-    const urgentValueChangeHandler = (event) => {
-        setEnteredUrgentValue(event.target.value);
-    };
-
-    const difficultyValueChangeHandler = (event) => {
-        setEnteredDifficultyValue(event.target.value);
-    };
+    const addTodoHandler = (todoName, todoImportance, todoUrgency, todoDifficulty) => {
+        setTodosList((prevTodosList) => {
+          return [...prevTodosList, {name: todoName, importance: todoImportance, urgency: todoUrgency, difficulty: todoDifficulty, id: Math.random().toString()}];
+        });
+      };
     
-    return (
-        <Card className='form-input'>
-            <form onSubmit={addTodoHandler}>
-                <label htmlFor="todo-name">Task: </label>
-                <input 
-                type="text" 
-                id='todo-name'
-                value={enteredTodoName} 
-                onChange={todoNameChangeHandler}
-                />
-                <label htmlFor="importance">Importance: </label>
-                <select 
-                id='importance' 
-                onChange={importantValueChangeHandler}
-                value={enteredImportantValue}
-                >   
-                    <option value="none"></option>
-                    <option value="Important">Important</option>
-                    <option value="Not Important">Not Important</option>
-                </select>
-                <label htmlFor="urgency">Urgency: </label>
-                <select 
-                id='urgency'
-                onChange={urgentValueChangeHandler}
-                value={enteredUrgentValue}
-                >
-                    <option value="none"></option>
-                    <option value="Urgent">Urgent</option>
-                    <option value="Not Urgent">Not Urgent</option>
-                </select>
-                <label htmlFor="difficulty">Difficulty: </label>
-                <select 
-                id='difficulty' 
-                onChange={difficultyValueChangeHandler}
-                value={enteredDifficultyValue}
-                >
-                    <option value="none"></option>
-                    <option value="Elementary">Elementary</option>
-                    <option value="Easy">Easy</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Hard">Hard</option>
-                </select>
-                <Button 
-                type="submit" 
-                className='add-button'>
-                    Add Task
-                </Button> 
-            </form>
+    const taskRemoveHandler = (id) => {
+        const newList = todosList.filter((todo) => todo.id !== id);
+        setTodosList(newList);
+    }
+
+    const startEditingHandler = () => {
+        setIsEditing(true);
+    };
+
+    const stopEditingHandler = () => {
+        setIsEditing(false);
+    };
+
+  return (
+    <div>
+        <div className='attask-list'>
+            <h2>Attask List</h2>
+            <hr />
+        </div>
+        <TodoList todos={todosList} onRemove={taskRemoveHandler}/>
+        {!isEditing && <Button onClick={startEditingHandler} className='add-todo'>Add New Task</Button>}
+        {isEditing && <AddTodoForm onCancel={stopEditingHandler} onAddTodo={addTodoHandler}/>}
+        <Card className='task-number'>
+            <h2>{todosList.length} Attask Left </h2>
         </Card>
+    </div>
+
   );
 };
 

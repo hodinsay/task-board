@@ -1,0 +1,51 @@
+.form-input{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 38rem;
+    text-align: left;
+}
+
+.form-input label{
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-input input{
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.15rem 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+
+    &:focus{
+        outline: none;
+        border-color: #4f005f;
+    }
+}
+
+.form-input select{
+    margin-bottom: 1rem;
+    margin-right: 0.9rem;
+    padding: 0.15rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &:focus{
+        outline: none;
+        border-color: #4f005f;
+    }
+}
+
+.form-input .add-button{
+    background: #33b249;
+    border: 1px solid #3fda59;
+    transition: background 0.5s, border-radius 0.5s;
+
+    &:hover,
+    &:active{
+        background: #3fda59;
+        border-radius: 5px;
+    }
+}
