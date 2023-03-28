@@ -1,8 +1,13 @@
 .todos{
-    margin: 2rem auto;
+    margin: 0 auto;
+    margin-top: -1rem;
     padding: 1rem;
     width: 90%;
     max-width: 40rem;
+}
+
+.todos h2{
+    text-align: center;
 }
 
 .todos div{
@@ -28,7 +33,11 @@
 }
 
 .todos label{
+    font-weight: bold;
+}
 
+.highlight{
+    font-style: italic;
 }
 
 .delete-btn{
