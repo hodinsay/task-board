@@ -1,5 +1,6 @@
 .form-input{
     margin: 0 auto;
+    margin-bottom: 2rem;
     padding: 1rem;
     width: 90%;
     max-width: 38rem;
@@ -36,6 +37,11 @@
         outline: none;
         border-color: #4f005f;
     }
+}
+
+.form-input div{
+    display: flex;
+    justify-content: space-between;
 }
 
 .form-input .add-button{

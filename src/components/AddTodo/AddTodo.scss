@@ -1,23 +1,27 @@
 .add-todo{
     margin: 0 auto;
-    width: 12%;
-    max-width: 40rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 38rem;
     display: flex;
-}
-
-.task-number{
-    margin: 2rem auto;
-    padding: 1rem;
-    width: 12%;
-    text-align: center;
+    border: 3px dashed #ccc;
+    border-radius: 5px;
 }
 
 .attask-list{
     margin: 0 auto;
     max-width: 38rem;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .attask-list h2{
     margin-bottom: 1rem;
+}
+
+hr{
+    border: 2px solid #000;
+    max-width: 38rem;
+    margin: 0 auto;
 }
