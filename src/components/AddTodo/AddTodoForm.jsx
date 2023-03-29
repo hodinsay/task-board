@@ -114,17 +114,19 @@ const AddTodo = (props) => {
                         <option value="Medium">Medium</option>
                         <option value="Hard">Hard</option>
                     </select>
-                    <Button 
-                    type="submit" 
-                    className='add-button'>
-                        Add Task
-                    </Button>
-                    <Button
-                    type='button'
-                    onClick={props.onCancel}
-                    >
-                        Cancel      
-                    </Button> 
+                    <div>
+                        <Button 
+                        type="submit" 
+                        className='add-button'>
+                            Add Task
+                        </Button>
+                        <Button
+                        type='button'
+                        onClick={props.onCancel}
+                        >
+                            Cancel      
+                        </Button> 
+                    </div>
                 </form>
             </Card>
         </div>
