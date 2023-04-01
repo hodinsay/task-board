@@ -1,0 +1,16 @@
+#nav ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    max-width: 38rem;
+}
+
+#nav > ul > li{
+    list-style: none;
+}
+
+#nav > ul > li > a{
+    text-decoration: none;
+    color: #000;
+}
+
