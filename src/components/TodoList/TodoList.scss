@@ -39,15 +39,3 @@
 .highlight{
     font-style: italic;
 }
-
-.delete-btn{
-    background: rgb(139, 26, 26);
-    border: 1px solid rgb(231, 78, 78);
-    transition: background 0.5s, border-radius 0.5s;
-
-    &:hover,
-    &:active{
-        background: rgb(231, 78, 78);
-        border-radius: 5px;
-    }
-}

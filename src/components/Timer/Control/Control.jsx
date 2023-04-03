@@ -4,23 +4,31 @@ const Control = (
     {
         setButtonText, 
         setTimerMode,
-        setIsActive
+        setIsActive,
+        setSecondsLeft,
+        setTimeUpMessage,
+        timerMode,
+        pomoLength,
+        shortLength,
+        longLength
     }
 ) => {
     
     const handleModeChange = (event) =>{
+        setTimerMode(event.target.id)
         setButtonText('START');
         setIsActive(false);
+        setTimeUpMessage('');
         
         switch(event.target.id){
             case 'short':
-                setTimerMode(5);
+                setSecondsLeft(shortLength * 60);
                 break;
             case 'long':
-                setTimerMode(15);
+                setSecondsLeft(longLength * 60);
                 break;
             default:
-                setTimerMode(25);
+                setSecondsLeft(pomoLength * 60);
                 break;
         }
 
@@ -32,8 +40,8 @@ const Control = (
             type="radio" 
             id='pomo' 
             name='mode'
+            checked={timerMode === 'pomo'}
             onChange={handleModeChange}
-            defaultChecked
             />
             <label htmlFor="pomo" className='controls-btn'>Pomodoro</label>
 
@@ -41,6 +49,7 @@ const Control = (
             type="radio" 
             id='short' 
             name='mode'
+            checked={timerMode === 'short'}
             onChange={handleModeChange}
             />
             <label htmlFor="short" className='controls-btn'>Short Break</label>
@@ -49,6 +58,7 @@ const Control = (
             type="radio" 
             id='long' 
             name='mode'
+            checked={timerMode === 'long'}
             onChange={handleModeChange}
             />
             <label htmlFor="long" className='controls-btn'>Long Break</label>

@@ -52,12 +52,11 @@ const AddTodo = (props) => {
     }
 
   return (
-    <div>
+    <div id='attask'>
         <div className='attask-list'>
             <h2>Attask List</h2>
             <h2> Attask: {todosList.filter(todo => !todo.complete).length}</h2>
         </div>
-        <hr />
         <TodoList todos={todosList} onRemove={taskRemoveHandler} toggleTodo={toggleTodo}/>
         {!isEditing && <Button onClick={startEditingHandler} className='add-todo'>+ Add Task</Button>}
         {isEditing && <AddTodoForm onCancel={stopEditingHandler} onAddTodo={addTodoHandler}/>}
