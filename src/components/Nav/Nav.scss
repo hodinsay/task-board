@@ -1,8 +1,11 @@
 #nav ul{
     display: flex;
     justify-content: space-between;
-    margin: 1rem auto;
+    align-items: center;
+    margin: 0 auto;
     max-width: 38rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
 }
 
 #nav > ul > li{
@@ -11,6 +14,12 @@
 
 #nav > ul > li > a{
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
 }
 
+.icon{
+    font-size: 1.5rem;
+}

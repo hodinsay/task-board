@@ -1,6 +1,5 @@
 .form-input{
     margin: 0 auto;
-    margin-bottom: 2rem;
     padding: 1rem;
     width: 90%;
     max-width: 38rem;
@@ -28,7 +27,7 @@
 
 .form-input select{
     margin-bottom: 1rem;
-    margin-right: 0.9rem;
+    margin-right: 0.6rem;
     padding: 0.15rem;
     border: 1px solid #ccc;
     cursor: pointer;
@@ -42,16 +41,4 @@
 .form-input div{
     display: flex;
     justify-content: space-between;
-}
-
-.form-input .add-button{
-    background: #33b249;
-    border: 1px solid #3fda59;
-    transition: background 0.5s, border-radius 0.5s;
-
-    &:hover,
-    &:active{
-        background: #3fda59;
-        border-radius: 5px;
-    }
 }

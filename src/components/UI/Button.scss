@@ -2,6 +2,16 @@
     padding: 1rem;
     cursor: pointer;
     color: #fff;
+    background: #4f005f;
+    border: 1px solid #4f005f;
+    transition: border-radius 0.5s, background 0.5s;
+
+    &:hover,
+    &:active{
+        background: #741188;
+        border-color: #741188;
+        border-radius: 5px;
+    }
 
     &:focus{
         outline: none;
