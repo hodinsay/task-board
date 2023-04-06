@@ -1,5 +1,31 @@
 #about{
     margin: 2rem auto;
-    border: 1px solid #000;
+    width: 90%;
     max-width: 38rem;
+    line-height: 32px;
+}
+
+#about > header > h1{
+    font-size: 1.8rem;
+    color: rgb(125, 83, 162);
+}
+
+#about > div{
+    margin-top: 2rem;
+}
+
+#about > div > h2{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(125, 83, 162);
+}
+
+#about a{
+    text-decoration: none;
+    color: rgb(125, 83, 162);
+    font-weight: bold;
+}
+
+#about li{
+    margin-left: 1rem;
 }

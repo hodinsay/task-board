@@ -1,5 +1,6 @@
 import './Nav.scss';
 import { GiSwordSpin } from 'react-icons/gi';
+import { Link } from 'react-scroll';
 
 const Nav = () => {
   return (
@@ -9,7 +10,16 @@ const Nav = () => {
               <a href="#"> <GiSwordSpin className='icon'/> Time Attask</a>
           </li>
           <li>
-              <a href="#">About</a>
+            <Link 
+              to="about" 
+              spy={true} 
+              smooth={true} 
+              offset={50} 
+              duration={500} 
+              href='#about'
+              >
+                  About
+            </Link>
           </li>
       </ul>
     </nav>
