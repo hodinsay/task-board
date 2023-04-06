@@ -7,7 +7,7 @@ const Nav = () => {
     <nav id='nav'>
       <ul>
           <li>
-              <a href="#"> <GiSwordSpin className='icon'/> Time Attask</a>
+              <a href="https://timeattask.netlify.app"> <GiSwordSpin className='icon'/> Time Attask</a>
           </li>
           <li>
             <Link 
