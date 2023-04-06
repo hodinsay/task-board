@@ -42,3 +42,11 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media only screen and (max-width: 520px)
+{
+    .form-input select{
+        display: block;
+        width: 50%
+    }
+};

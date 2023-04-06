@@ -1,0 +1,42 @@
+#footer{
+    width: 90%;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer > ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#footer > h2{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+#footer > h6{
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.logo{
+    font-size: 2rem;
+    color: rgb(125, 83, 162);
+}
+
+.heart{
+    color: red;
+}
+
+.din{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(125, 83, 162);
+}

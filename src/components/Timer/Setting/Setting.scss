@@ -58,3 +58,15 @@
         width: 40rem;
     }
 }
+
+@media only screen and (max-width: 520px)
+{
+    .setting-options{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .setting-options > div{
+        margin-top: 2rem;
+    }
+};
