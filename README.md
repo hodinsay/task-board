@@ -10,7 +10,7 @@ Time Attask is a time customizable pomodoro timer that works on the computer bro
 - **Adding/Removing Task:** Identify the importance, urgency, and difficulty of each task. Keep track of completed and ongoing tasks.
 
 # Tech Used: 
-`HTML 5` `CSS 3` `JavaScript ES6` `JSX` `Node.js` `Vite` `React.js` `Sass`
+`HTML 5` `CSS 3` `JavaScript ES6` `Vite.js` `React.js` `Sass`
 
 # Download App and Install All Dependencies:
 `npm install`
