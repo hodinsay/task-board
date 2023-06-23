@@ -13,7 +13,7 @@ A customizable to-do app to help increase productivity. Time Attask helps users 
 - **Adding/Removing Task:** Identify the importance, urgency, and difficulty of each task. Keep track of completed and ongoing tasks.
 
 # Tech Used: 
-`HTML 5` `CSS 3` `JavaScript ES6` `Vite.js` `React.js` `Sass`
+`HTML 5` `CSS 3` `JavaScript ES6` `Vite` `React.js` `Sass`
 
 # Download App and Install All Dependencies:
 `npm install`
