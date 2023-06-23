@@ -9,6 +9,7 @@
 .form-input label{
     font-weight: bold;
     font-size: 0.9rem;
+    display: block;
 }
 
 .form-input input{
@@ -28,6 +29,8 @@
 .form-input select{
     margin-bottom: 1rem;
     margin-right: 0.1rem;
+    width: 50%;
+    margin-top: 0.5rem;
     padding: 0.15rem;
     border: 1px solid #ccc;
     cursor: pointer;
@@ -47,6 +50,5 @@
 {
     .form-input select{
         display: block;
-        width: 50%
     }
 };
